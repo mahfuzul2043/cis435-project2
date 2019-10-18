@@ -19,13 +19,12 @@ body > * {
 table {
     border-collapse: collapse;
     text-align: center;
-    border: .25px solid #dddddd;
 }
 
 td {
     height: 100px;
     width: 100px;
-    box-shadow: 0 1px .5px rgba(0,0,0,0.12), 0 1px .5px rgba(0,0,0,0.24);
+    border: .25px solid #dddddd;
 }
 
 td:hover {
