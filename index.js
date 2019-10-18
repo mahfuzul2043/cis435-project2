@@ -80,7 +80,10 @@ let makeMove = tileIndex => {
             document.querySelector('.win-message').style.display = 'block';
             let willPlayNewGame = confirm("You won! Would you like to play again?");
             if (willPlayNewGame) generateRandomGame();
-            else tiles.forEach(td => td.onclick = null);
+            else tiles.forEach(td => {
+                td.onclick = null;
+                td.style.cursor = 'not-allowed'
+            });
         }
     } else {
         document.querySelector('.error-message').style.display = 'block';
@@ -118,6 +121,7 @@ let generateRandomGame = () => {
     for (let i = 0; i < tiles.length; i++) {
         tiles[i].innerText = shuffledTileNums[i];
         tiles[i].onclick = () => makeMove(i);
+        tiles[i].style.cursor = 'pointer';
     }
 }
 
@@ -127,5 +131,6 @@ let generateSimpleGame = () => {
     for (let i = 0; i < tiles.length; i++) {
         tiles[i].innerText = tileNums[i];
         tiles[i].onclick = () => makeMove(i);
+        tiles[i].style.cursor = 'pointer';
     }
 }
