@@ -7,6 +7,7 @@
         <script src="index.js"></script>
     </head>
     <body>
+        <h1>Game of 15 Puzzle</h1>
         <table>
             <tr>
                 <td></td>
@@ -33,7 +34,17 @@
                 <td></td>
             </tr>
         </table>
-        <button onclick="generateRandomGame()">Random Game</button>
-        <button onclick="generateSimpleGame()">Simple Game</button>
+        <div class='buttons'>
+            <button onclick="generateRandomGame()">New Game</button>
+            <button onclick="generateSimpleGame()">Simple Game</button>
+        </div>
+        <h3 class='win-message'>You Won!</h3>
+        <h3 class='error-message'>Invalid Move!</h3>
+        <fieldset>
+            <legend><b>Statistics</b></legend>
+            Number of moves: <span id='numMoves'>0</span>
+            <hr />
+            Timer: <span id='timer'>00s</span>
+        </fieldset>
     </body>
 </html>
